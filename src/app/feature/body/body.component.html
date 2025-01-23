@@ -1,0 +1,225 @@
+<!-- <app-navbar></app-navbar> -->
+
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <!-- Akash Div (Left-aligned) -->
+        <div class="d-flex justify-content-start">
+            <h3 class="mx-3">akash</h3>
+        </div>
+
+        <!-- Navbar Toggler for Mobile View -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+            aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav ms-auto my-2 my-lg-0" style="--bs-scroll-height: 100px;">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">Tech Stack</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#profile">Profile</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="#work">Works</a>
+                </li> -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact-me">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+
+
+
+<!-- <div class="navigation">
+    <div>
+        <h3 class="mt-0">akash</h3>
+    </div>
+    <div class="mt-2">
+        <ul class="d-flex flex-row">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Tech Stack</a></li>
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#work">Works</a></li>
+            <li><a href="#contact-me">Contact</a></li>
+            <li><a href="#contact-me">Button</a></li>
+            <div class="openmenu"><i class="fa fa-bars"></i></div>
+            <div class="closemenu"><i class="fa fa-times"></i></div>
+        </ul>
+
+    </div>
+</div> -->
+
+
+<div class="container">
+
+    <!-- Social Handles -->
+    <div class="social">
+
+    </div>
+
+    <!-- Home Section -->
+    <section class="home" id="home">
+        <div class="d-flex flex-column flex-md-row justify-content-evenly align-items-center ">
+            <div class="p-2 a">
+                <h1 class="jomo">Hey There! 👋</h1>
+                <h2 class="jomo">
+                    I'm
+                    <span #autoInput class="auto-input text-warning"></span>
+                </h2>
+                <div>
+                    <a href="https://github.com/Soraakash"><i class="bi bi-github me-4"></i></a>
+                    <a href="https://www.linkedin.com/in/akash-kumar-b577b8161/"><i class="bi bi-linkedin"></i></a>
+
+                </div>
+                <!-- <a href="#about"><button
+                        class="btn btn-dark mt-3">Know More</button></a> -->
+
+
+            </div>
+            <div class="p-2">
+                <div class=" blob-image">
+                    <img src="../../../assets/images/ak.jpg" alt="Placeholder Image" class=" profile-pic">
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
+
+    <!-- About me Section -->
+    <section class="about-me" id="about">
+        <div class="d-flex flex-column flex-md-row justify-content-evenly align-items-center h-100 w-100">
+            <div class="p-2 a ">
+                <div class="img-box">
+                    <img src="../../../assets/images/bike.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="about-box">
+                <div class="about-box-box">
+                    <h1 class="jomo text-danger">About Me</h1>
+                    <p>
+                        Hello, I am Akash Kumar, a 2024 Computer Science and Engineering graduate from Haldia Institute of
+                        Technology. I have a strong passion for problem-solving and possess extensive experience as a web
+                        developer, particularly in Angular and front-end-development.
+                    </p>
+                    
+                    <p>
+                        I am currently working as a Software-engineer intern at Riverbed Technology.
+                    </p>
+                    <a href="../../../assets/resume/Akash_Kumar.pdf" target="_blank"><button
+                            class="btn btn-dark mt-3">Download CV</button></a>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+
+    <!-- TECH STACK -->
+
+    <section class="skills" id="skills">
+        <!-- <h1 class="text-center">Tech Stack</h1> -->
+        <div class="skills-icons">
+            <div
+              class="skills-img-box"
+              *ngFor="let skill of skills"
+              [style.animation-delay]="skill.animationDelay"
+            >
+              <img [src]="skill.imgSrc" />
+            </div>
+          </div>
+
+        <div class="skills-text">
+            <h3 class="jomo">TECH-STACK |</h3>
+        </div>
+
+    </section>
+
+    <!-- Coding Profile -->
+    <section class="coding-profile" id="profile">
+        <div class="profile-link mt-5">
+
+            <div class="card" *ngFor="let card of profile">
+                <div class="text-center">
+                    <img class="card-img-top" [src]="card.imgSrc" [style.height]="card.height"
+                        [style.width]="card.width" alt="Card image cap">
+                </div>
+                <div class="card-body text-center">
+                    <p class="card-text">
+                        {{card.name}}
+                        <span class="ms-2">
+                            <a [href]="card.link"><i class="bi bi-box-arrow-up-right text-primary"></i></a>
+                        </span>
+                    </p>
+                    <h5>
+                        {{card.description}}
+                    </h5>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- <div class="skills-text">
+                <h3 class="jomo">PROFILE </h3>
+            </div> -->
+    </section>
+
+    <!--  PROJECTS -->
+    <!-- <section class="projects" id="work">
+        <h1 class="jomo">
+            Coming Soon
+        </h1>
+
+    </section> -->
+    <!-- Contact me Section -->
+    <section id="contact-me">
+        <div class="form-container">
+            <div class="form-box me-5">
+                <h1 class="jomo ">Contact Me </h1>
+                <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)" class="mt-4">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" class="form-control" id="name" name="name" ngModel required>
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" ngModel required>
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="subject">Subject:</label>
+                        <input type="text" class="form-control" id="subject" name="subject" ngModel required>
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="message">Message:</label>
+                        <textarea class="form-control" id="message" name="message" rows="3" ngModel required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-4" [disabled]="contactForm.invalid">Submit</button>
+                </form>
+            </div>
+            <div class="contact-box-image">
+                <img src="../../../assets/images/cotact-laptop.jpg" alt="">
+
+            </div>
+        </div>
+    </section>
+</div>
+
+
+  
